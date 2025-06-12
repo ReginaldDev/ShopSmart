@@ -1,7 +1,7 @@
 name: Tarefa
 description: Crie uma tarefa técnica para o projeto
 title: "[TASK] "
-labels: [task] # Adicionamos o label 'task' automaticamente
+labels: [task]
 assignees: []
 body:
   - type: textarea
@@ -33,4 +33,4 @@ body:
           required: true
         - label: Pull Request (PR) criada e pronta para revisão
           required: true
-    required: true # Garante que o checklist apareça por padrão
+    required: true

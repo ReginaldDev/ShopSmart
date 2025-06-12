@@ -1,31 +1,36 @@
 name: Tarefa
 description: Crie uma tarefa técnica para o projeto
-title: "[Tarefa] "
-labels: []
+title: "[TASK] "
+labels: [task] # Adicionamos o label 'task' automaticamente
 assignees: []
 body:
   - type: textarea
     id: descricao
     attributes:
-      label: Descrição
-      description: Explique o que deve ser feito nesta tarefa.
-      placeholder: Exemplo: Criar a tela de cadastro de produtos para admin...
+      label: Descrição da Tarefa
+      description: Explique detalhadamente o que deve ser feito nesta tarefa.
+      placeholder: Exemplo: Criar a tela de cadastro de produtos para a área administrativa do sistema.
       required: true
 
   - type: textarea
     id: requisitos
     attributes:
-      label: Requisitos técnicos
-      description: Tecnologias ou bibliotecas envolvidas nesta tarefa.
-      placeholder: Exemplo: React, Tailwind, Axios...
+      label: Requisitos Técnicos e Dependências
+      description: Quais tecnologias, bibliotecas, APIs ou outras tarefas estão envolvidas?
+      placeholder: Exemplo: React, TailwindCSS, integração com API de produtos, depende da [TASK] Autenticação de Admin.
       required: false
 
   - type: checkboxes
     id: checklist
     attributes:
-      label: Checklist de conclusão
+      label: Checklist de Conclusão da Tarefa
       options:
-        - label: Código escrito
-        - label: Testado localmente
-        - label: Commit enviado
-        - label: PR criada
+        - label: Código desenvolvido
+          required: true
+        - label: Testado localmente (unidade, integração, manual)
+          required: true
+        - label: Commits enviados para a branch
+          required: true
+        - label: Pull Request (PR) criada e pronta para revisão
+          required: true
+    required: true # Garante que o checklist apareça por padrão

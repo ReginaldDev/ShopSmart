@@ -11,6 +11,7 @@ body:
       description: >
         Explique detalhadamente o que deve ser feito nesta tarefa.
         Exemplo: Criar a tela de cadastro de produtos para a área administrativa do sistema.
+      placeholder: Exemplo: Criar a tela de cadastro de produtos para a área administrativa do sistema.
       required: true
 
   - type: textarea
@@ -20,6 +21,7 @@ body:
       description: >
         Quais tecnologias, bibliotecas, APIs ou outras tarefas estão envolvidas?
         Exemplo: React, TailwindCSS, integração com API de produtos, depende da [TASK] Autenticação de Admin.
+      placeholder: Exemplo: React, TailwindCSS, integração com API de produtos, depende da [TASK] Autenticação de Admin.
       required: false
 
   - type: checkboxes
@@ -35,4 +37,3 @@ body:
           required: true
         - label: Pull Request (PR) criada e pronta para revisão
           required: true
-    required: true

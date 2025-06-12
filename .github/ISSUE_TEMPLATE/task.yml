@@ -8,16 +8,18 @@ body:
     id: descricao
     attributes:
       label: Descrição da Tarefa
-      description: Explique detalhadamente o que deve ser feito nesta tarefa.
-      placeholder: Exemplo: Criar a tela de cadastro de produtos para a área administrativa do sistema.
+      description: >
+        Explique detalhadamente o que deve ser feito nesta tarefa.
+        Exemplo: Criar a tela de cadastro de produtos para a área administrativa do sistema.
       required: true
 
   - type: textarea
     id: requisitos
     attributes:
       label: Requisitos Técnicos e Dependências
-      description: Quais tecnologias, bibliotecas, APIs ou outras tarefas estão envolvidas?
-      placeholder: Exemplo: React, TailwindCSS, integração com API de produtos, depende da [TASK] Autenticação de Admin.
+      description: >
+        Quais tecnologias, bibliotecas, APIs ou outras tarefas estão envolvidas?
+        Exemplo: React, TailwindCSS, integração com API de produtos, depende da [TASK] Autenticação de Admin.
       required: false
 
   - type: checkboxes

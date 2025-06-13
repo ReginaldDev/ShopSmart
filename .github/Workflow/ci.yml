@@ -1,0 +1,44 @@
+
+name: CI/CD ShopSmart
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Instalar dependências frontend
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Instalar dependências backend
+        run: |
+          cd backend
+          npm ci
+
+      - name: Rodar testes backend (Jest)
+        run: |
+          cd backend
+          npm test
+
+      - name: Rodar build frontend
+        run: |
+          cd frontend
+          npm run build
